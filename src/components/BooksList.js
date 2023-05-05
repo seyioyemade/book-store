@@ -1,9 +1,7 @@
-const BooksList = () => {
-  return ( 
-    <ul>
-      <li></li>
-    </ul>
-   );
-}
- 
+const BooksList = () => (
+  <ul>
+    <li />
+  </ul>
+);
+
 export default BooksList;

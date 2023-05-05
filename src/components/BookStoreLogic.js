@@ -1,28 +1,34 @@
 import { useState } from 'react';
 import AddBook from './AddBook';
+import BooksList from './BooksList';
 
 const BookStoreLogic = () => {
-  const [book, setBook] = useState([
+  const [books, setBook] = useState([
     {
       id: 1,
       title: 'The Hunger Games',
       author: 'Seyi Oyemade',
     },
+    {
+      id: 2,
+      title: 'The Future',
+      author: 'Blessing Otario',
+    },
   ]);
 
   const addBookItem = (title, author) => {
     const newBook = {
-      id: 2,
+      id: 3,
       title,
       author,
     };
-    setBook([...book, newBook]);
+    setBook([...books, newBook]);
   };
 
   return (
     <div>
+      <BooksList books={books} />
       <AddBook addBookItem={addBookItem} />
-      <button type="button">Remove</button>
     </div>
   );
 };

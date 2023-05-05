@@ -3,6 +3,7 @@ import {
 } from 'react-router-dom';
 import Books from './components/pages/Books';
 import Categories from './components/pages/Categories';
+import './styles/app.css';
 
 const App = () => (
   <BrowserRouter>

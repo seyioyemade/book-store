@@ -1,11 +1,11 @@
+import BookStoreLogic from '../BookStoreLogic';
 import Navbar from '../Navbar';
 
 const Books = () => (
   <>
     <Navbar />
-    <div>This is Books page</div>
+    <BookStoreLogic />
   </>
-
 );
 
 export default Books;

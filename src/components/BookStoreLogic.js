@@ -1,34 +1,25 @@
-import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import AddBook from './AddBook';
 import BooksList from './BooksList';
+import { addBook } from '../redux/books/booksSlice';
 
 const BookStoreLogic = () => {
-  const [books, setBook] = useState([
-    {
-      id: 1,
-      title: 'The Hunger Games',
-      author: 'Seyi Oyemade',
-    },
-    {
-      id: 2,
-      title: 'The Future',
-      author: 'Blessing Otario',
-    },
-  ]);
+  const storeBooks = useSelector((state) => state.books.books);
+  const dispatch = useDispatch();
 
-  const addBookItem = (title, author) => {
+  const addBookItem = (id, title, author) => {
     const newBook = {
-      id: 3,
+      item_id: id,
       title,
       author,
     };
-    setBook([...books, newBook]);
+    dispatch(addBook(newBook));
   };
 
   return (
     <div>
-      <BooksList books={books} />
-      <AddBook addBookItem={addBookItem} />
+      <BooksList books={storeBooks} />
+      <AddBook addBookItem={addBookItem} books={storeBooks} />
     </div>
   );
 };

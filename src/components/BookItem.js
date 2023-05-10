@@ -5,10 +5,6 @@ import { removeBook } from '../redux/books/booksSlice';
 const BookItem = ({ book }) => {
   const dispatch = useDispatch();
 
-  // const delBook = (id) => {
-  //   );
-  // };
-
   return (
     <li>
       <span>

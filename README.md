@@ -86,7 +86,6 @@ Install this project with:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Use Redux in React components.
 - Connect to API.
 - Styling.
 

@@ -3,7 +3,7 @@ import BookItem from './BookItem';
 
 const BooksList = ({ books }) => (
   <ul>
-    {books.map((book) => (
+    {books?.map((book) => (
       <BookItem key={book.id} book={book} />
     ))}
   </ul>

@@ -83,7 +83,7 @@ h1 {
 }
 
 h2 {
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, serif;
   font-size: 2rem;
   font-weight: 700;
   font-stretch: normal;
@@ -95,7 +95,7 @@ h2 {
 }
 
 h3 {
-  font-family: Montserrat, sans-serif;
+  font-family: Montserrat, serif;
   font-size: 1.4rem;
   font-weight: 900;
   font-stretch: normal;
@@ -105,7 +105,7 @@ h3 {
 }
 
 h4 {
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, sans-serif;
   font-size: 1.2rem;
   font-weight: 300;
   font-stretch: normal;
@@ -126,7 +126,7 @@ button {
 li button {
   background: none;
   border: none;
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, serif;
   font-size: 1.2rem;
   font-weight: 300;
   font-stretch: normal;

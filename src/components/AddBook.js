@@ -33,22 +33,26 @@ const AddBook = ({ addBookItem, books }) => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={title}
-          placeholder="Add Book..."
-          onChange={handleInputChange}
-        />
-        <select name="authors" onChange={handleSelectChange}>
-          <option value="" disabled selected>Author</option>
-          <option value="Seyi Oyemade">Seyi Oyemade</option>
-          <option value="Blessing Otario">Blessing Otario</option>
-          <option value="James Spiner">James Spiner</option>
-        </select>
-        <button type="submit">ADD BOOK</button>
-      </form>
-      <span className="submit-warning">{message}</span>
+      <hr />
+      <div className="add-book">
+        <h3>ADD NEW BOOK</h3>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            value={title}
+            placeholder="Book title"
+            onChange={handleInputChange}
+          />
+          <select name="authors" onChange={handleSelectChange}>
+            <option value="" disabled selected>Author</option>
+            <option value="Seyi Oyemade">Seyi Oyemade</option>
+            <option value="Blessing Otario">Blessing Otario</option>
+            <option value="James Spiner">James Spiner</option>
+          </select>
+          <button type="submit">ADD BOOK</button>
+        </form>
+        <span className="submit-warning">{message}</span>
+      </div>
     </>
   );
 };

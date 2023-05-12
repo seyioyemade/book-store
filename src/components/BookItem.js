@@ -12,12 +12,28 @@ const BookItem = ({ book }) => {
 
   return (
     <li>
-      <span>
-        {book.title}
-        <br />
-        {book.author}
-      </span>
-      <button type="button" onClick={removeBookAction}>Remove</button>
+      <div className="book-info">
+        <p className="action">Action</p>
+        <h2>{book.title}</h2>
+        <h4>{book.author}</h4>
+        <div className="interaction-btns">
+          <div><button type="button" className="comment-btn">Comment</button></div>
+          <div><button type="button" onClick={removeBookAction} className="remove-btn">Remove</button></div>
+          <div><button type="button">Edit</button></div>
+        </div>
+      </div>
+      <div className="completed-div">
+        <span className="circle">.</span>
+        <div>
+          <p className="percent">64%</p>
+          <p className="completed">Completed</p>
+        </div>
+      </div>
+      <div className="progress">
+        <p>CURRENT CHAPTER</p>
+        <p>Chapter 17</p>
+        <button type="button">UPDATE PROGRESS</button>
+      </div>
     </li>
   );
 };

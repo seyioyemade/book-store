@@ -1,35 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700;800&family=Roboto+Slab:wght@200;400;700;800&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
-  padding: 3rem;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
+  font-family: Montserrat, sans-serif;
+  background-color: #fafafa;
 }
 
 header {
   display: flex;
   align-items: center;
-  margin-bottom: 3rem;
+  justify-content: space-between;
+  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+  background-color: #fff;
+}
+
+header > div:nth-child(1) {
+  display: flex;
+  align-items: center;
+}
+
+header > div:nth-child(2) {
+  border-radius: 50%;
+  border: 1px solid #e8e8e8;
+  padding: 0.3rem 0.5rem;
+}
+
+ul {
+  padding: 3rem 6.25rem;
 }
 
 header ul {
   display: flex;
   gap: 3rem;
   margin-left: 3rem;
+  padding: 0;
 }
 
 nav {
@@ -37,15 +50,219 @@ nav {
 }
 
 li {
+  display: flex;
+  justify-content: space-between;
   list-style: none;
   margin-bottom: 2rem;
+  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
 }
 
-span {
-  display: block;
+header li {
+  border: none;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+header li > a {
+  text-decoration: none;
+  letter-spacing: 1.9px;
+  color: #121212;
+}
+
+header li:nth-child(2) > a {
+  color: #12121254;
+}
+
+h1 {
+  color: #0290ff;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: RobotoSlab, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+  margin: 0.2rem 0;
+}
+
+h3 {
+  font-family: Montserrat, serif;
+  font-size: 1.4rem;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  color: #8f8f8f;
+}
+
+h4 {
+  font-family: RobotoSlab, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+li button {
+  background: none;
+  border: none;
+  font-family: RobotoSlab, serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+  padding: 0 1.2rem;
+}
+
+.remove-btn {
+  border-left: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8;
+}
+
+.action {
+  font-family: Montserrat, sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #8f8f8f;
+}
+
+.comment-btn {
+  padding-left: 0;
+}
+
+.interaction-btns {
+  display: flex;
+  margin-top: 2rem;
 }
 
 input,
 select {
-  margin-right: 1rem;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  font-size: 1.4rem;
+}
+
+input {
+  flex: 3;
+}
+
+select {
+  color: #a3a3a3;
+  flex: 2;
+}
+
+input::placeholder {
+  font-size: 1.4rem;
+  color: #a3a3a3;
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.3rem solid #3498db;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  background-color: #fff;
+  border-bottom-color: rgb(175, 175, 175);
+  transform: rotate(240deg);
+  color: #fff0;
+}
+
+hr {
+  margin: 0 6.25rem;
+  border: 1px solid #e8e8e8;
+}
+
+.add-book {
+  padding: 0 6.25rem 15rem;
+  margin-top: 3rem;
+}
+
+form {
+  margin-top: 2rem;
+  display: flex;
+  gap: 3rem;
+}
+
+form button {
+  flex: 1;
+  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  border: none;
+  color: #fff;
+}
+
+.book-info {
+  flex: 2;
+}
+
+.completed-div {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex: 1;
+}
+
+.percent {
+  font-size: 2.5rem;
+}
+
+.completed {
+  color: #41414185;
+}
+
+.progress {
+  border-left: 1px solid #e8e8e8;
+  padding-left: 9rem;
+  font-size: 1.2rem;
+}
+
+.progress > p:nth-child(1) {
+  color: #41414185;
+  margin-bottom: 1rem;
+}
+
+.progress button {
+  padding: 1rem 3rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  border: none;
+  color: #ffffff91;
+  margin-top: 3rem;
+}
+
+.user svg {
+  color: #0290ff;
+  font-size: 20px;
+  margin-top: 2px;
+  cursor: pointer;
 }
